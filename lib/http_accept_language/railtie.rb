@@ -3,10 +3,6 @@ module HttpAcceptLanguage
 
     initializer "http_accept_language.add_middleware" do |app|
       app.middleware.use Middleware
-      
-      ActiveSupport.on_load :action_controller do
-        include EasyAccess
-      end
     end
 
   end
